@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Build / dist
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+*.env
+
+# Python venv / caches
+venv/
+.env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Python checkpoints / caches
+.ipynb_checkpoints/
+
+# mac / OS files
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+
+# Flask model folder (ignore your LoRA folder)
+# Replace the folder name if different — I used the exact name you gave.
+flask/qwen2vl_grpo_lora_ultrafast_fixed/
+# If you later move model into `flask/models/` etc, add that pattern:
+flask/models/
+# or to ignore any large model-like folders:
+**/models/
+**/*lora*/
+
+# Ignore large binary artifacts
+*.bin
+*.safetensors
+*.pt
+*.ckpt
+
+# Git LFS pointer files (if using LFS)
+.gitattributes
