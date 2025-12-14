@@ -27,7 +27,10 @@ router.post('/upload-and-analyze', upload.single('image'), async (req, res) => {
     if (!userId) return res.status(401).json({ error: 'Not authenticated' });
 
     const file = req.file;
-    const question = req.body.question || '';
+    // const question = req.body.question || '';
+    const question = req.body.query || '';
+
+    
 
     if (!file) return res.status(400).json({ error: 'No file uploaded' });
 
@@ -52,16 +55,19 @@ router.post('/upload-and-analyze', upload.single('image'), async (req, res) => {
     });
 
     // return saved result to client
-    res.json({
-      ok: true,
-      upload: {
-        id: uploadDoc._id,
-        filename: uploadDoc.filename,
-        originalName: uploadDoc.originalName,
-        question: uploadDoc.question,
-        flaskResponse: uploadDoc.flaskResponse
-      }
-    });
+    // res.json({
+    //   ok: true,
+    //   upload: {
+    //     id: uploadDoc._id,
+    //     filename: uploadDoc.filename,
+    //     originalName: uploadDoc.originalName,
+    //     question: uploadDoc.question,
+    //     flaskResponse: uploadDoc.flaskResponse
+    //   }
+    // });
+
+    res.json(flaskResp.data);
+
   } catch (err) {
     console.error(err.response?.data || err.message || err);
     res.status(500).json({ error: err.message || 'Upload failed' });

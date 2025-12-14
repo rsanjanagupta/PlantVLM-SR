@@ -169,7 +169,9 @@ def analyze():
             return_dict=True
         )
 
-        inputs = {k: v.to(DEVICE) for k, v in inputs.items()}
+        # inputs = {k: v.to(DEVICE) for k, v in inputs.items()}
+        inputs = {k: v.to(DEVICE) for k, v in inputs.items() if v is not None}
+
 
         with torch.no_grad():
             output = model.generate(
