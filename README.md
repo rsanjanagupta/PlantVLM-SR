@@ -1,4 +1,4 @@
-# 🌱 PlantVLM-SR: Vision-Language Model for Crop Pest Detection & Advisory
+# 🌱 PlantVLM-SR: Self-Rewarding Vision-Language Model for Agricultural Pest Recognition
 
 PlantVLM-SR is a **Vision–Language Model (VLM) based intelligent crop pest detection system** that analyzes plant images and answers natural-language questions.
 
@@ -105,6 +105,8 @@ messages = [
 - Qwen Team (Alibaba)
 - PyTorch
 - Google Colab
+  **Vision-SR1: Self-Rewarding Vision-Language Model via Reasoning Decomposition**
+  (for introducing the GRPO-based self-refinement training paradigm that inspired this work)
 
 ---
 
