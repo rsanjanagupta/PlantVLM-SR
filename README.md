@@ -21,7 +21,7 @@ This project fine-tunes **Qwen2-VL-2B-Instruct** using SFT followed by **LoRA + 
 
 - **Base Model:** Qwen2-VL-2B-Instruct
 - **Adapter Type:** LoRA (Language-only, cleaned for inference)
-- **Training Method:** GRPO (Guided Reinforcement Policy Optimization)
+- **Training Method:** GRPO (Group Relative Policy Optimization)
 - **Precision:** 4-bit NF4 quantization
 - **Frameworks:** PyTorch, Hugging Face Transformers, PEFT
 
